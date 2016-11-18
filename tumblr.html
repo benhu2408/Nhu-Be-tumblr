@@ -1,0 +1,192 @@
+<!Doctype html>
+<html>
+<head>
+<title>SushiFoodYum</title>
+<link rel="shortcut icon" href="{Favicon}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}
+ <meta name="description" content="{MetaDescription}" />
+ {/block:Description}
+</head>
+<style>
+        *{
+         margin: 0;
+         padding: 0;
+        }
+
+         h1{
+
+            font-weight:bolder;
+
+
+
+           }
+         h2{
+            font-size:15px;
+            font-style:italic;
+            font-family:Garamond;
+            margin-bottom:80px;
+      }
+
+        body{
+               background-image: url('http://previews.123rf.com/images/stolenpencil/stolenpencil1506/stolenpencil150600007/41960701-Sushi-and-rolls-seamless-pattern-on-white-background-Stock-Vector.jpg');
+               background-repeat:no-repeat;
+               background-size:cover;
+               background-attachment:fixed;
+               font-family:garamond;
+
+           }
+        ul{
+          list-style-type:none;
+          padding-left:200px;
+          overflow:hidden;
+
+
+        }
+         li{
+         float:left;
+         margin-left:100px;
+         display:inline;
+
+
+
+         }
+      ul li a{
+         display:block;
+
+         font-weight:bold;
+         color:black;
+         width:10px;
+        text-transform:uppercase;
+         text-decoration:none;
+         font-family:Phosphate;
+         font-style:inline;
+
+
+
+        }
+         .list{
+            display:block;
+            text-align:center;
+            background-color:#FFE4E1;
+            padding:4px;
+            margin-left:25%;
+            margin-right:27%;
+            border-radius:20px;
+            clear:both;
+         }
+
+        .avatar{
+          background-color:pink;
+          box-shadow:1px 1px 1px 1px #ccc;
+          padding:10px;
+          border-radius:80px;
+          margin-left:10%;
+          width: 10%;
+      }
+
+
+        .header img{
+            float:left;
+            height:128px;
+
+
+        }
+        .tumblr-title{
+            color:#c66459;
+            margin-bottom:25px;
+        }
+
+        .tumblr-description{
+            color:black;
+            font-size:15px;
+            font-style:italic;
+            font-family:Garamond;
+            margin-bottom:80px;
+        }
+        .post{
+            position: relative;
+            margin: 20px auto;
+            width: 700px;
+        }
+        .text{
+            width: 500px;
+            padding: 40px;
+            background-color:lightpink;
+            box-shadow: 1px 2px 1px 1px #ccc;
+            margin: 20px;
+            border-radius:30px;
+
+        }
+
+
+       .article{
+            background-color:#FFE4E1;
+            opacity: 0.3;
+
+
+        }
+
+
+
+
+
+
+
+</style>
+<body>
+<header>
+        <div class= "header">
+        <img src="{PortraitURL-128}" class="avatar">
+        <h1 class="tumblr-title","float-left">SushiFoodYum</h1>
+        <h2 class="tumblr-description"> {Description} </h2>
+         </div>
+</header>
+    <div class="list">
+     <ul>
+    <li><a href="#home">home</a><li>
+    <li><a href="#archive">archive</a></li>
+    <li><a href="#link">link</a></li>
+    </ul>
+    </div>
+    <div class="post">
+    {block:Posts}
+    <div class="text">
+        {block:Text}
+        {/block:Title}
+        {Body}
+
+     {/block:Text}
+    {block:Photo}
+    <img src="{PhotoURL-500}" alt="{PhotoAlt}" width="100%"></a>
+    {/block:Photo}
+    {block:Caption}
+    {Caption}
+    {/block:Caption}
+
+    <div class="article" >
+             <article>
+
+            <ul>
+            <li> {block:Date} {Month} {DayOfMonth}, {year} {/block:Date}</li>
+            <li>{LikeButton}</li>
+            <li>{ReblogButton}</li>
+              </ul>
+
+        </article>
+
+        </div>
+
+            </div>
+
+            {/block:Posts}
+
+       </div>
+
+            {/block:Text}
+
+           {/block:Posts}
+
+</body>
+
+</html>
